@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 //import img from "./imagen1.jpg"
-class Tarjeta extends Component {
+class Articulos extends Component {
     
 
     render() {
@@ -32,4 +32,4 @@ class Tarjeta extends Component {
     }
 }
 
-export default Tarjeta;
+export default Articulos;

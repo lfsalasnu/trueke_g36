@@ -1,0 +1,34 @@
+[
+    {
+        "Titulo":"Tarjeta 1",
+        "Descripcion": "Descripción Tarjeta 1",
+        "Prioridad":"Alta",
+        "Numero":10,
+        "Responsable":"Luis",
+        "imagen":"./Recursos/img1.jpg"
+    },
+    {
+        "Titulo":"Tarjeta 2",
+        "Descripcion": "Descripción Tarjeta 2",
+        "Prioridad":"Media",
+        "Numero":20,
+        "Responsable":"Paula",
+        "imagen":"./Recursos/img2.jpg"
+    },
+    {
+        "Titulo":"Tarjeta 3",
+        "Descripcion": "Descripción Tarjeta 3",
+        "Prioridad":"Baja",
+        "Numero":30,
+        "Responsable":"Pedro",
+        "imagen":"./Recursos/despues.webp"
+    },
+    {
+        "Titulo":"Tarjeta 4",
+        "Descripcion": "Descripción Tarjeta 4",
+        "Prioridad":"Alta",
+        "Numero":40,
+        "Responsable":"Ariana",
+        "imagen":"./Recursos/dracula.webp"
+    }
+]

@@ -1,16 +1,16 @@
 import React,{Component} from "react";
-import Tarjeta from "./Tarjeta";
+import Tarjeta from "./Articulos";
 
 class Formulario extends Component{
     constructor(){
         super();
         this.state={
-            titulo:'',
+            articulo:'',
             descripcion:'',
             imagen:'',
-            responsable:'',
-            tiempo:0,
-            prioridad:'baja'
+            usuario:'',
+            cantidad:0,
+            valor:'bajo'
         }
         this.cambiar=this.cambiar.bind(this);
         this.guardar=this.guardar.bind(this);
@@ -32,30 +32,30 @@ class Formulario extends Component{
 
     render(){
         return(
-            <div className="card w-50 m-auto mt-4">
-                <h1 className="m-auto">  Nueva Tarjeta</h1>
+            <div className="card w-50 m-auto mt-4 bg-dark border-white">
+                <h1 className="m-auto">  Nuevo Articulo</h1>
                 <form className="card-body">
                     <div className="form-group">
-                        <input className="form-control" type="text" placeholder="Titulo Tarjeta" name="titulo" onChange={this.cambiar}/>
+                        <input className="form-control" type="text" placeholder="Nombre Articulo" name="nombre" onChange={this.cambiar}/>
                     </div>
                     <div className="form-group">
-                        <textarea rows={3} className="form-control mt-3" type="text" placeholder="Descripción Tarjeta" name="descripcion" onChange={this.cambiar}/>
+                        <textarea rows={3} className="form-control mt-3" type="text" placeholder="Descripción Articulo" name="descripcion" onChange={this.cambiar}/>
                     </div>
                     <div className="form-group">
-                        <input className="form-control mt-3" type="text" placeholder="Imagen Tarjeta" name="imagen" onChange={this.cambiar}/>
+                        <input className="form-control mt-3" type="text" placeholder="Imagen" name="imagen" onChange={this.cambiar}/>
                     </div>
                     <div className="form-group">
-                        <input className="form-control mt-3" type="number" placeholder="Tiempo en minutos" name="tiempo" onChange={this.cambiar}/>
+                        <input className="form-control mt-3" type="number" placeholder="Cantidad" name="cantidad" onChange={this.cambiar}/>
                     </div>
                     <div className="form-group">
-                        <input className="form-control mt-3" type="text" placeholder="Responsable Tarjeta" name="responsable" onChange={this.cambiar}/>
+                        <input className="form-control mt-3" type="text" placeholder="usuario" name="usuario" onChange={this.cambiar}/>
                     </div>
                     <div className="form-group">
-                        <h5 className="mt-3">Prioridad</h5>
-                        <select className="form-control" name="prioridad" onChange={this.cambiar}>
-                            <option>Alta</option>
-                            <option>Media</option>
-                            <option>Baja</option>
+                        <h5 className="mt-3">Valor</h5>
+                        <select className="form-control" name="valor" onChange={this.cambiar}>
+                            <option>Alto</option>
+                            <option>Medio</option>
+                            <option>Bajo</option>
                         </select>
                     </div>
                     <div className="form-group mt-3">

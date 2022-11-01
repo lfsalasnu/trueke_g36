@@ -1,5 +1,9 @@
 import React, { Component } from "react";
-import App from "../App";
+import Cargar from "./Cargar";
+//import App from "../App";
+import Formulario from "./Formulario";
+import Inicio_sesion from "./Inicio_sesion";
+import Nuevo_usuario from "./Nuevo_usuario";
 class Navegacion extends Component {
 
     render() {
@@ -22,18 +26,24 @@ class Navegacion extends Component {
                     </ul>
 
                     <form className="d-flex justify-content-end" role="search">
-                        <input className="form-control me-2 justify-content-end" type="search" placeholder="Buscar" aria-label="Search"/>
+                        <input className="form-control me-2 justify-content-end ms-5" type="search" placeholder="Buscar" aria-label="Search"/>
                         <button className="d-flex btn btn-outline-primary justify-content-end" type="submit">Buscar</button>
                     </form>
                 </div>
 
                 <div className="tab-content" id="myTabContent">
                     <div className="tab-pane fade show active text-white" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-                        <App />
+                        <Cargar/>
                     </div>
-                    <div className="tab-pane fade text-white" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">Enlace 2</div>
-                    <div className="tab-pane fade text-white" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">Enlace 3</div>
-                    <div className="tab-pane fade text-white" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">Enlace 4</div>
+                    <div className="tab-pane fade text-white" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                        <Formulario/>
+                    </div>
+                    <div className="tab-pane fade text-white" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                        <Inicio_sesion/>
+                    </div>
+                    <div className="tab-pane fade text-white" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">
+                        <Nuevo_usuario/>
+                    </div>
                 </div>
             </div>
         );
