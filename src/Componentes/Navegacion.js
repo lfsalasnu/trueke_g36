@@ -29,6 +29,9 @@ class Navegacion extends Component {
                         <input className="form-control me-2 justify-content-end ms-5" type="search" placeholder="Buscar" aria-label="Search"/>
                         <button className="d-flex btn btn-outline-primary justify-content-end" type="submit">Buscar</button>
                     </form>
+                    <div className="ms-5 btn btn-outline-primary">
+                        Usuario: Luis
+                    </div>
                 </div>
 
                 <div className="tab-content" id="myTabContent">

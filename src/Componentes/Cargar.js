@@ -9,7 +9,7 @@ class Cargar extends Component{
     }
     render(){
         const datos= this.state.datos.map((dato)=>{return(
-        <Articulos titulo={dato.titulo} descripcion={dato.descripcion} imagen={dato.imagen} prioridad={dato.prioridad} tiempo={dato.tiempo} responsable={dato.responsable}/>
+        <Articulos nombre={dato.nombre} descripcion={dato.descripcion} imagen={dato.imagen} valor={dato.valor} cantidad={dato.cantidad} usuario={dato.usuario}/>
         );
     })
         //const datos= <Tarjeta titulo="prueba"/>
