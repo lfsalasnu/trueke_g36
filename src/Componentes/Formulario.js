@@ -1,11 +1,12 @@
 import React,{Component} from "react";
 import Tarjeta from "./Articulos";
+import axios from "axios";
 
 class Formulario extends Component{
     constructor(){
         super();
         this.state={
-            articulo:'',
+            nombre:'',
             descripcion:'',
             imagen:'',
             usuario:'',
@@ -26,8 +27,16 @@ class Formulario extends Component{
 
     guardar(e){
         e.preventDefault();
-        console.log(this.state);
-        return(<Tarjeta/>);
+        axios.post('http://localhost:5000/articulos/nuevo',this.state)
+            .then(dato=>console.log(this.state))
+        alert("Articulo Guardado")
+        document.getElementById("nombre").value=""
+        document.getElementById("descripcion").value=""
+        document.getElementById("cantidad").value=""
+        document.getElementById("usuario").value=""
+        document.getElementById("imageb=n").value=""
+        //console.log(this.state);
+        //return(<Tarjeta/>);
     }
 
     render(){
@@ -36,19 +45,19 @@ class Formulario extends Component{
                 <h1 className="m-auto">  Nuevo Articulo</h1>
                 <form className="card-body">
                     <div className="form-group">
-                        <input className="form-control" type="text" placeholder="Nombre Articulo" name="nombre" onChange={this.cambiar}/>
+                        <input className="form-control" type="text" placeholder="Nombre Articulo" name="nombre" id="nombre" onChange={this.cambiar}/>
                     </div>
                     <div className="form-group">
-                        <textarea rows={3} className="form-control mt-3" type="text" placeholder="Descripción Articulo" name="descripcion" onChange={this.cambiar}/>
+                        <textarea rows={3} className="form-control mt-3" type="text" placeholder="Descripción Articulo" id="descripcion" name="descripcion" onChange={this.cambiar}/>
                     </div>
                     <div className="form-group">
-                        <input className="form-control mt-3" type="text" placeholder="Imagen" name="imagen" onChange={this.cambiar}/>
+                        <input className="form-control mt-3" type="text" placeholder="Imagen" name="imagen" id="imagen" onChange={this.cambiar}/>
                     </div>
                     <div className="form-group">
-                        <input className="form-control mt-3" type="number" placeholder="Cantidad" name="cantidad" onChange={this.cambiar}/>
+                        <input className="form-control mt-3" type="number" placeholder="Cantidad" name="cantidad" id="cantidad" onChange={this.cambiar}/>
                     </div>
                     <div className="form-group">
-                        <input className="form-control mt-3" type="text" placeholder="usuario" name="usuario" onChange={this.cambiar}/>
+                        <input className="form-control mt-3" type="text" placeholder="usuario" name="usuario" id="usuario" onChange={this.cambiar}/>
                     </div>
                     <div className="form-group">
                         <h5 className="mt-3">Valor</h5>

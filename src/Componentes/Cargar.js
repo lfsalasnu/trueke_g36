@@ -15,7 +15,7 @@ class Cargar extends Component{
         //const datos= <Tarjeta titulo="prueba"/>
         return(
             <div className="row">
-            {datos}
+            {/* {datos} */}
             </div>
             );
     }

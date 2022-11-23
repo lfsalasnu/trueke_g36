@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Cargar from "./Cargar";
+import DAO_articulos from "./DAO_articulos";
 //import App from "../App";
 import Formulario from "./Formulario";
 import Inicio_sesion from "./Inicio_sesion";
@@ -37,6 +38,7 @@ class Navegacion extends Component {
                 <div className="tab-content" id="myTabContent">
                     <div className="tab-pane fade show active text-white" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
                         <Cargar/>
+                        <DAO_articulos/>
                     </div>
                     <div className="tab-pane fade text-white" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
                         <Formulario/>
